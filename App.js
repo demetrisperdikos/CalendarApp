@@ -227,7 +227,7 @@ export default function App() {
       const location = response.data.loc.split(',');
       const lat = location[0];
       const lon = location[1];
-      const weatherResponse = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=2a11d9c0780de013b119006d83b79e11`);
+      const weatherResponse = await axios.get(`//myAPIkey`);
       const noonForecasts = weatherResponse.data.list.filter(forecast => {
         const forecastTime = new Date(forecast.dt * 1000);
         return forecastTime.getUTCHours() === 12;
